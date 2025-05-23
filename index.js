@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import axios from 'axios'
 
 const app = express()
 app.use(cors())
@@ -18,8 +19,6 @@ app.post('/api/callback', async (req, res) => {
 
   res.status(200).send("OK"); // Always respond to M-Pesa
 });
-
-app.listen(process.env.PORT || 3000);
 
 
 
